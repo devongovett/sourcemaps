@@ -1,0 +1,33 @@
+{
+  "name": "@parcel/sourcemap",
+  "version": "2.0.0-alpha.5",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parcel-bundler/sourcemap.git"
+  },
+  "scripts": {
+    "install": "prebuild-install -r napi || node-gyp rebuild",
+    "prebuild": "prebuild -t 3 -r napi --strip",
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">= 10.0.0"
+  },
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "node-addon-api": "^1.6.2",
+    "prebuild-install": "^5.2.5"
+  },
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "mocha": "^6.0.2",
+    "prebuild": "^8.2.1",
+    "source-map": "^0.7.3"
+  },
+  "binary": {
+    "napi_versions": [
+      3
+    ]
+  }
+}
